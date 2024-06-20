@@ -1,0 +1,9 @@
+Javascript
+-synchronous
+-single-threaded
+-blocking language
+
+Data type
+number 1,2,3,4
+boolean true false
+string "hello", 'hello'
