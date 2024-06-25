@@ -8,3 +8,5 @@ Data type
 number 1,2,3,4
 boolean true false
 string "hello", 'hello'
+
+foreach doesnot produce any data
