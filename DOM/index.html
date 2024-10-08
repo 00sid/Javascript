@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="styleee.css">
+  <style>
+    /* Add basic styles for the button */
+    #counterButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: lightgray;
+      border: none;
+      border-radius: 5px;
+    }
+    #resetButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: lightgray;
+      border: none;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body style='padding: 10px; background-color: chocolate; display: flex; justify-content: center; align-items: center;'>
+  <div id="container" style='height: 400px; width: 400px; padding: 20px; background-color: blanchedalmond; display: flex; justify-content: center; align-items: center; flex-direction: column;'>
+    <h1 class="title">WELCOME TO CLICKING GAME</h1>
+    <p id="content">Please Click Me</p>
+    <!-- Add a button for the counter -->
+
+    <div>
+
+        <button id="counterButton" onclick='buttonClick()' onmouseover='mouseInClick()' onmouseout='mouseOutClick()'>Click me: 0</button>
+        <button id="resetButton" onclick="reset()" onmouseover="mouseInReset()" onmouseout="mouseOutReset()">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    const container  = document.getElementById('container')
+
+    console.log("container",container)
+    let title = document.querySelector('title') // <h1>
+        console.log("title",title)
+    let content = document.getElementById('content') 
+    
+    
+
+   let counterButton = document.getElementById('counterButton')
+    let resetButton = document.getElementById('resetButton')
+   console.log(counterButton);
+
+    let counter = 0;
+
+    function counterText(){
+        counterButton.textContent = 'Click me: ' + counter;
+        content.textContent=counter>0? "You have clicked "+counter+" times":"Please Click Me";
+       
+}
+
+    function buttonClick() {
+      counter++;
+        counterText();      
+      
+    };
+
+    function mouseInClick() {
+      counterButton.style.backgroundColor = 'darkgray';
+    };
+
+    function mouseOutClick() {
+      counterButton.style.backgroundColor = 'lightgray';
+    };
+    function mouseInReset() {
+      resetButton.style.backgroundColor = 'darkgray';
+    };
+
+    function mouseOutReset() {
+      resetButton.style.backgroundColor = 'lightgray';
+    };
+    function reset(){
+        counter = 0;
+        counterText();
+        
+    }
+  </script>
+</body>
+</html>
