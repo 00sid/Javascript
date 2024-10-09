@@ -1,0 +1,9 @@
+.button {
+    display: inline-block; /* allows the span to be sized */
+    width: 150px; /* set the desired width */
+    height: 100px; /* set the desired height */
+    
+    border: 2px solid black; /* optional: adds a border */
+    text-align: center; /* centers the text inside the rectangle */
+    line-height: 100px; /* vertically aligns text in this case */
+}
