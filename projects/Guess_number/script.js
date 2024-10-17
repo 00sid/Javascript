@@ -25,6 +25,9 @@ function validateGuess(guess) {
   } else if (guess < 1 || guess > 100) {
     lowOrHigh.innerHTML = "Please enter number between range 1-100 ";
   } else {
+    prevGuess.push(guess);
+    if (numGuess === 11) {
+    }
     checkGuess(guess);
   }
 }
